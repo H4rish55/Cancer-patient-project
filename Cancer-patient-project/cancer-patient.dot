@@ -1,0 +1,25 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label="Passive Smoker <= 6.5\ngini = 0.656\nsamples = 100\nvalue = [36, 25, 39]\nclass = Medium", fillcolor="#f9f6fe"] ;
+1 [label="Swallowing Difficulty <= 4.5\ngini = 0.565\nsamples = 71\nvalue = [7.0, 25.0, 39.0]\nclass = Medium", fillcolor="#d9c3f7"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Obesity <= 4.5\ngini = 0.577\nsamples = 44\nvalue = [7.0, 25.0, 12.0]\nclass = Low", fillcolor="#aff4cc"] ;
+1 -> 2 ;
+3 [label="Level <= 4.5\ngini = 0.238\nsamples = 29\nvalue = [0, 25, 4]\nclass = Low", fillcolor="#59e995"] ;
+2 -> 3 ;
+4 [label="gini = 0.0\nsamples = 25\nvalue = [0, 25, 0]\nclass = Low", fillcolor="#39e581"] ;
+3 -> 4 ;
+5 [label="gini = 0.0\nsamples = 4\nvalue = [0, 0, 4]\nclass = Medium", fillcolor="#8139e5"] ;
+3 -> 5 ;
+6 [label="Smoking <= 2.5\ngini = 0.498\nsamples = 15\nvalue = [7, 0, 8]\nclass = Medium", fillcolor="#efe6fc"] ;
+2 -> 6 ;
+7 [label="gini = 0.0\nsamples = 7\nvalue = [7, 0, 0]\nclass = High", fillcolor="#e58139"] ;
+6 -> 7 ;
+8 [label="gini = 0.0\nsamples = 8\nvalue = [0, 0, 8]\nclass = Medium", fillcolor="#8139e5"] ;
+6 -> 8 ;
+9 [label="gini = 0.0\nsamples = 27\nvalue = [0, 0, 27]\nclass = Medium", fillcolor="#8139e5"] ;
+1 -> 9 ;
+10 [label="gini = 0.0\nsamples = 29\nvalue = [29, 0, 0]\nclass = High", fillcolor="#e58139"] ;
+0 -> 10 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+}
